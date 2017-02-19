@@ -11,6 +11,8 @@ items =  [
   menu_item("View documentation",       {url: "https://jasonette.github.io/documentation", view: "Web"}),
 ]
 
-json.sections([items]) do |section|
-  json.items(items){ |item| json.merge! item }
+json.sections do
+  json.child! do
+    json.items(items){ |item| json.merge! item }
+  end
 end
