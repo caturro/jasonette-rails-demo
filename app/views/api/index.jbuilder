@@ -1,18 +1,90 @@
-components = [
-  label_component("It's ALIVE!",   align: :center, font: "Courier-Bold", size: "18"),
-  label_component("This is a demo app. You can make your own app by changing the url inside settings.plist", align: :center, font: "Courier",padding: "10", size: "14"),
-  label_component("{ ˃̵̑ᴥ˂̵̑}", align: "center", font: "HelveticaNeue-Bold", size: "50"),
-]
-items =  [
-  image_item("rails-logo.png"),
-  vertical_item(components),
-  menu_item("Check out Live DEMO",      {url: "file://demo.json", fresh: "true"}),
-  menu_item("Watch the tutorial video", {url: "https://www.youtube.com/watch?v=hfevBAAfCMQ", view: "Web"}),
-  menu_item("View documentation",       {url: "https://jasonette.github.io/documentation", view: "Web"}),
-]
+json.body do
+  sections do
+    items do
+      image image_url("rails-logo.png") do
+        style do
+          align "center"
+          padding "30"
+        end
+      end
 
-json.sections do
-  json.child! do
-    json.items(items){ |item| json.merge! item }
+      layout :vertical do
+        style do
+          padding "30"
+          spacing "20"
+          align "center"
+        end
+        components do
+          label "It's ALIVE!" do
+            style do
+              align "center"
+              font "Courier-Bold"
+              size "18"
+            end
+          end
+
+          label do
+            text "This is a demo app. You can make your own app by changing the url inside settings.plist"
+            style do
+              align "center"
+              font "Courier"
+              padding "10"
+              size "14"
+            end
+          end
+
+          label "{ ˃̵̑ᴥ˂̵̑}" do
+            style do
+              align "center"
+              font "HelveticaNeue-Bold"
+              size "50"
+            end
+          end
+        end
+      end
+
+      label "Check out Live DEMO" do
+        style do
+          align "right"
+          padding "10"
+          color "#000000"
+          font "HelveticaNeue"
+          size "12"
+        end
+
+        href do
+          url "file://demo.json"
+          fresh "true"
+        end
+      end
+
+      label "Watch the tutorial video" do
+        style do
+          align "right"
+          padding "10"
+          color "#000000"
+          font "HelveticaNeue"
+          size "12"
+        end
+        href do
+          url "https://www.youtube.com/watch?v=hfevBAAfCMQ"
+          view "web"
+        end
+      end
+
+      label "View documentation" do
+        style do
+          align "right"
+          padding "10"
+          color "#000000"
+          font "HelveticaNeue"
+          size "12"
+        end
+        href do
+          url "https://jasonette.github.io/documentation"
+          view "web"
+        end
+      end
+    end
   end
 end

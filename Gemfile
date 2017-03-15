@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'jbuilder', '~> 2.5'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
@@ -27,3 +28,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'yajl-ruby'
+gem 'jasonette-rails', path: "/Users/mwlang/projects/gems/jasonette"

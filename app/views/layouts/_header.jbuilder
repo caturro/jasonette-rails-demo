@@ -1,5 +1,3 @@
-json.header do
-  json.style do
-    json.background "#ffffff"
-  end
+json.build do
+  header.style.background "#BB0000"
 end
