@@ -30,4 +30,4 @@ group :development do
 end
 
 gem 'yajl-ruby'
-gem 'jasonette-rails', path: "/Users/mwlang/projects/gems/jasonette"
+gem 'jasonette-rails'
