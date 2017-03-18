@@ -7,7 +7,6 @@ end
 
 gem 'rails', '~> 5.0.1'
 gem 'sass-rails'
-gem 'sqlite3'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -21,12 +20,17 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'yajl-ruby'
